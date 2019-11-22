@@ -6,7 +6,20 @@ namespace 命令模式First
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SimpleRemoteControl remote = new SimpleRemoteControl();
+            Light light = new Light();
+            LightOnCommand lightOn = new LightOnCommand(light);
+
+            remote.SetCommand(lightOn);
+            remote.ButtonWasPressed();
+
+
+            TV tv = new TV();
+            TVOnCommand tvOn = new TVOnCommand(tv);
+
+            remote.SetCommand(tvOn);
+            remote.ButtonWasPressed();
+
         }
     }
 
@@ -30,6 +43,19 @@ namespace 命令模式First
         }
     }
 
+    public class TVOnCommand : Command
+    {
+        TV tv;
+        public TVOnCommand(TV tv)
+        {
+            this.tv = tv;
+        }
+        public void Execute()
+        {
+            tv.On();
+        }
+    }
+
     public class Light
     {
         public void On()
@@ -39,6 +65,18 @@ namespace 命令模式First
         public void Off()
         {
             Console.WriteLine("灯关");
+        }
+    }
+
+    public class TV
+    {
+        public void On()
+        {
+            Console.WriteLine("电视开");
+        }
+        public void Off()
+        {
+            Console.WriteLine("电视关");
         }
     }
 
@@ -53,6 +91,10 @@ namespace 命令模式First
         {
             slot = command;
         }
-
+        public void ButtonWasPressed()
+        {
+            slot.Execute();
+        }
     }
+
 }
