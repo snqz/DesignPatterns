@@ -35,6 +35,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "命令模式First", "命令
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "命令模式Two", "命令模式Two\命令模式Two.csproj", "{BFAD3D57-FA36-4A25-A134-27693F4A88CE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "适配器模式和外观模式", "适配器模式和外观模式", "{694EDA79-D253-41A4-AF9A-D59CD49E4798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "适配器模式和外观模式First", "适配器模式和外观模式First\适配器模式和外观模式First.csproj", "{2D5AAFDB-8696-4294-ABDF-A2ADE20C0D98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +101,10 @@ Global
 		{BFAD3D57-FA36-4A25-A134-27693F4A88CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFAD3D57-FA36-4A25-A134-27693F4A88CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFAD3D57-FA36-4A25-A134-27693F4A88CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D5AAFDB-8696-4294-ABDF-A2ADE20C0D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D5AAFDB-8696-4294-ABDF-A2ADE20C0D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D5AAFDB-8696-4294-ABDF-A2ADE20C0D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D5AAFDB-8696-4294-ABDF-A2ADE20C0D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +114,7 @@ Global
 		{1E5C756C-065D-4CF7-87EC-828F7F005173} = {20572BFF-9A26-4FD6-BAE1-1086A28B5E34}
 		{4637C5F8-8785-47D1-BA2B-039C107E9E83} = {E14BE9FF-DAAD-4041-ABC7-3810C1515CD3}
 		{BFAD3D57-FA36-4A25-A134-27693F4A88CE} = {E14BE9FF-DAAD-4041-ABC7-3810C1515CD3}
+		{2D5AAFDB-8696-4294-ABDF-A2ADE20C0D98} = {694EDA79-D253-41A4-AF9A-D59CD49E4798}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30EA7844-87B1-4FB9-BA06-5355B5C503EB}
