@@ -55,7 +55,8 @@ namespace 适配器模式和外观模式First
     }
     #endregion
 
-    //适配器
+    #region 适配器
+    //火鸡适配器
     class TurkeyAdapter : Duck
     {
         Turkey turkey;
@@ -76,4 +77,23 @@ namespace 适配器模式和外观模式First
             turkey.Gobble();
         }
     }
+    //鸭子适配器
+    class DuckAdapter:Turkey
+    {
+        Duck duck;
+        public DuckAdapter(Duck duck)
+        {
+            this.duck = duck;
+        }
+        public void Fly()
+        {
+            duck.Fly();
+        }
+
+        public void Gobble()
+        {
+            duck.Quack();
+        }
+    }
+    #endregion
 }
