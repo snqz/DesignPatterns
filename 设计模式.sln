@@ -41,7 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "适配器模式First", "适
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "适配器模式Two", "适配器模式和外观模式Two\适配器模式Two.csproj", "{298F4E6E-7260-4BA1-A1AD-3246EEBEC17C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "外观模式First", "外观模式First\外观模式First.csproj", "{3A0E979A-FA66-4F75-8FBF-96428F981572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "外观模式First", "外观模式First\外观模式First.csproj", "{3A0E979A-FA66-4F75-8FBF-96428F981572}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "模板方法模式", "模板方法模式", "{7CC1692E-5C1A-4E80-92C1-0A085DBD6D7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "模板方法模式First", "模板方法模式First\模板方法模式First.csproj", "{A1124543-A2C3-4156-9271-FC41720BA48C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +121,10 @@ Global
 		{3A0E979A-FA66-4F75-8FBF-96428F981572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A0E979A-FA66-4F75-8FBF-96428F981572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A0E979A-FA66-4F75-8FBF-96428F981572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1124543-A2C3-4156-9271-FC41720BA48C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1124543-A2C3-4156-9271-FC41720BA48C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1124543-A2C3-4156-9271-FC41720BA48C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1124543-A2C3-4156-9271-FC41720BA48C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,6 +137,7 @@ Global
 		{2D5AAFDB-8696-4294-ABDF-A2ADE20C0D98} = {694EDA79-D253-41A4-AF9A-D59CD49E4798}
 		{298F4E6E-7260-4BA1-A1AD-3246EEBEC17C} = {694EDA79-D253-41A4-AF9A-D59CD49E4798}
 		{3A0E979A-FA66-4F75-8FBF-96428F981572} = {694EDA79-D253-41A4-AF9A-D59CD49E4798}
+		{A1124543-A2C3-4156-9271-FC41720BA48C} = {7CC1692E-5C1A-4E80-92C1-0A085DBD6D7E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30EA7844-87B1-4FB9-BA06-5355B5C503EB}

@@ -6,7 +6,17 @@ namespace 外观模式First
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Amplifier amp = new Amplifier();
+            Tuner tuner = new Tuner();
+            DvdPlayer dvdPlayer = new DvdPlayer();
+            CdPlayer cdPlayer = new CdPlayer();
+            Projector projector = new Projector();
+            TheaterLights theaterLights = new TheaterLights();
+            Screen screen = new Screen();
+            PopcornPopper popcornPopper = new PopcornPopper();
+            HomeTheaterFacade homeTheaterFacade = new HomeTheaterFacade(amp,tuner,dvdPlayer,cdPlayer,projector,theaterLights,screen,popcornPopper);
+            homeTheaterFacade.WatchMovie("复仇者联盟");
+            homeTheaterFacade.EndMovie();
         }
     }
 
@@ -36,18 +46,23 @@ namespace 外观模式First
 
         public void WatchMovie(string movie)
         {
-            Console.WriteLine("开始看电影");
+            Console.WriteLine($"开始看电影{movie}");
             _popcornPopper.on();
+            _theaterLights.on();
+            _theaterLights.Dim(10);
+            _dvdPlayer.on();
+        }
+        public void EndMovie()
+        {
+            Console.WriteLine("结束看电影");
+            _popcornPopper.Off();
+            _theaterLights.Off();
+            _dvdPlayer.Off();
         }
     }
 
-    interface items
-    {
-        void on();
-    }
-
     //放大
-    class Amplifier : items
+    class Amplifier
     {
         public void on()
         {
@@ -55,59 +70,91 @@ namespace 外观模式First
         }
     }
     //调谐器
-    class Tuner : items
+    class Tuner 
     {
         public void on()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("打开调谐器");
+        }
+        public void Off()
+        {
+            Console.WriteLine("关闭调谐器");
         }
     }
     //Dvd播放器
-    class DvdPlayer : items
+    class DvdPlayer
     {
         public void on()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("打开DVD播放器");
+        }
+        public void Off()
+        {
+            Console.WriteLine("关闭调谐器");
         }
     }
     //Cd播放器
-    class CdPlayer : items
+    class CdPlayer
     {
         public void on()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("打开CD播放器");
+        }
+        public void Off()
+        {
+            Console.WriteLine("关闭CD播放器");
         }
     }
     //投影仪
-    class Projector : items
+    class Projector 
     {
         public void on()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("打开投影仪");
+        }
+        public void Off()
+        {
+            Console.WriteLine("关闭投影仪");
         }
     }
     //剧院的灯光
-    class TheaterLights : items
+    class TheaterLights
     {
         public void on()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("打开剧场的灯光");
+        }
+        public void Off()
+        {
+            Console.WriteLine("关闭剧场的灯光");
+        }
+        public void Dim(int num)
+        {
+            Console.WriteLine($"调节灯关到{num}档");
         }
     }
     //屏幕
-    class Screen : items
+    class Screen
     {
         public void on()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("打开屏幕");
+        }
+        public void Off()
+        {
+            Console.WriteLine("关闭屏幕");
         }
     }
     //爆米花机
-    class PopcornPopper : items
+    class PopcornPopper 
     {
         public void on()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("打开爆米花机");
+        }
+        public void Off()
+        {
+            Console.WriteLine("关闭爆米花机");
         }
     }
 }
